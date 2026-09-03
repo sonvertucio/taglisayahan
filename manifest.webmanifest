@@ -1,0 +1,21 @@
+{
+  "name": "TAGLISAYAHAN 2026",
+  "short_name": "TAGLISAYAHAN",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0610",
+  "theme_color": "#7a1633",
+  "description": "Esports-inspired intramurals management system for SACCI.",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

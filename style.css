@@ -1,0 +1,73 @@
+
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Segoe UI,Arial;
+color:white;
+background:
+radial-gradient(circle at top,#8b1745,transparent 35%),
+linear-gradient(135deg,#100008,#41001b);
+min-height:100vh;
+padding:20px;
+}
+.particles{
+position:fixed;inset:0;
+background-image:radial-gradient(#ffd700 1px,transparent 1px);
+background-size:40px 40px;
+opacity:.15;
+}
+header{text-align:center;position:relative}
+.logo{font-size:90px;animation:float 2s infinite}
+h1{
+font-size:clamp(40px,7vw,90px);
+color:#ffd700;
+text-shadow:0 0 35px gold;
+}
+h3{color:#ffd700}
+nav{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+margin:20px;
+}
+nav a{
+padding:12px 22px;
+background:#ffffff18;
+border:1px solid #ffd70055;
+border-radius:30px;
+color:white;
+text-decoration:none;
+}
+.hero{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:20px;
+}
+@media(max-width:800px){.hero{grid-template-columns:1fr}}
+.card{
+background:#ffffff12;
+border:1px solid #ffd70066;
+border-radius:25px;
+padding:30px;
+backdrop-filter:blur(15px);
+margin:20px 0;
+}
+.champion{
+text-align:center;
+}
+.stats{
+display:grid;
+gap:15px;
+}
+.stats div,.rank{
+background:#0006;
+padding:18px;
+border-radius:15px;
+}
+.rank{
+display:flex;
+justify-content:space-between;
+margin:10px 0;
+}
+@keyframes float{50%{transform:translateY(-15px)}}

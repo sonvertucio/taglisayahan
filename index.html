@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TAGLISAYAHAN 2026</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(135deg,#25000f,#72002b);
+color:white;
+min-height:100vh;
+}
+header{
+padding:40px;
+text-align:center;
+}
+h1{
+font-size:55px;
+color:#ffd700;
+text-shadow:0 0 30px gold;
+animation:glow 2s infinite;
+}
+@keyframes glow{
+50%{transform:scale(1.04)}
+}
+nav{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+}
+button{
+padding:14px 25px;
+border-radius:30px;
+border:none;
+background:#ffd700;
+font-weight:bold;
+cursor:pointer;
+}
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+.card{
+background:#ffffff15;
+border:2px solid #ffd700;
+border-radius:25px;
+padding:25px;
+backdrop-filter:blur(15px);
+box-shadow:0 20px 50px #0005;
+}
+.rank{
+padding:15px;
+margin:10px 0;
+background:#0008;
+border-radius:15px;
+}
+.gold{
+color:#ffd700;
+}
+.hidden{
+display:none;
+}
+input,select{
+padding:12px;
+border-radius:10px;
+width:100%;
+margin:5px 0;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🏆 TAGLISAYAHAN 2026</h1>
+<p>St. Anthony College Calapan City, Inc.</p>
+<h3 class="gold">"IN SACCI, WE TRANSFORM!"</h3>
+
+<nav>
+<button onclick="show('home')">Home</button>
+<button onclick="show('leaderboard')">Leaderboard</button>
+<button onclick="show('admin')">Admin</button>
+<button onclick="show('led')">LED Mode</button>
+</nav>
+
+</header>
+
+
+<div class="container">
+
+<section id="home" class="page">
+<div class="grid">
+
+<div class="card">
+<h2>🔥 Championship Arena</h2>
+<p>
+Public intramurals portal for students, teachers, families and spectators.
+</p>
+<h2 id="champion"></h2>
+<button onclick="fireworks()">🏆 Champion Reveal</button>
+</div>
+
+<div class="card">
+<h2>Statistics</h2>
+<p>Total Events: <span id="events"></span></p>
+<p>Total Points: <span id="points"></span></p>
+</div>
+
+</div>
+</section>
+
+
+<section id="leaderboard" class="page hidden">
+
+<div class="card">
+<h2>🏆 LIVE LEADERBOARD</h2>
+<div id="board"></div>
+</div>
+
+</section>
+
+
+<section id="admin" class="page hidden">
+
+<div class="card">
+
+<h2>⚙ Admin Command Center</h2>
+
+<input id="pass" placeholder="Admin Password">
+
+<button onclick="login()">Login</button>
+
+<div id="adminPanel" class="hidden">
+
+<h3>Add Result</h3>
+
+<select id="family">
+<option>Phoenix Family</option>
+<option>Titan Family</option>
+<option>Dragon Family</option>
+</select>
+
+<select id="place">
+<option>Champion</option>
+<option>Runner Up</option>
+<option>Third Place</option>
+</select>
+
+<button onclick="addResult()">
+Submit Result
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="led" class="page hidden">
+
+<div class="card">
+
+<h1>LED MODE</h1>
+
+<h2 id="ledChampion"></h2>
+
+<p>
+LIVE SCORES • NEXT EVENT • CHAMPION ANNOUNCEMENT
+</p>
+
+</div>
+
+</section>
+
+
+</div>
+
+
+<script>
+
+let data={
+families:[
+{name:"Phoenix Family",points:1200},
+{name:"Titan Family",points:950},
+{name:"Dragon Family",points:700}
+],
+events:5
+};
+
+
+function update(){
+
+data.families.sort((a,b)=>b.points-a.points);
+
+let board=document.getElementById("board");
+
+board.innerHTML="";
+
+data.families.forEach((f,i)=>{
+
+board.innerHTML+=
+`
+<div class="rank">
+#${i+1}
+<b>${f.name}</b>
+<br>
+⭐ ${f.points} points
+</div>
+`;
+
+});
+
+
+document.getElementById("champion").innerHTML=
+"👑 Champion: "+data.families[0].name;
+
+document.getElementById("ledChampion").innerHTML=
+"👑 "+data.families[0].name;
+
+document.getElementById("events").innerHTML=data.events;
+
+document.getElementById("points").innerHTML=
+data.families.reduce((a,b)=>a+b.points,0);
+
+}
+
+
+function show(id){
+
+document.querySelectorAll(".page")
+.forEach(x=>x.classList.add("hidden"));
+
+document.getElementById(id)
+.classList.remove("hidden");
+
+}
+
+
+function login(){
+
+if(document.getElementById("pass").value=="SACCI2026"){
+
+document.getElementById("adminPanel")
+.classList.remove("hidden");
+
+}else{
+
+alert("Wrong Password");
+
+}
+
+}
+
+
+function addResult(){
+
+let f=document.getElementById("family").value;
+let p=document.getElementById("place").value;
+
+let points={
+"Champion":10,
+"Runner Up":7,
+"Third Place":5
+};
+
+data.families.find(x=>x.name==f).points+=points[p];
+
+update();
+
+alert("Leaderboard Updated");
+
+}
+
+
+function fireworks(){
+
+document.body.style.background=
+"radial-gradient(circle,gold,#25000f)";
+
+setTimeout(()=>{
+
+document.body.style.background=
+"linear-gradient(135deg,#25000f,#72002b)";
+
+},1000);
+
+}
+
+
+update();
+
+</script>
+
+</body>
+</html>

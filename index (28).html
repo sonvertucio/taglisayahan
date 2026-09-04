@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050405"><meta name="description" content="Fullscreen live ranking display for the TAGLISAYAHAN 2026 championship arena.">
+  <title>LED Arena Mode | TAGLISAYAHAN 2026</title>
+  <link rel="icon" href="../assets/images/sacci-logo.png"><link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/core.js" defer></script><script src="../js/led.js" defer></script>
+</head>
+<body class="led-body" data-page="led" data-root="../">
+  <main class="led-arena" id="led-arena">
+    <canvas class="led-particles" id="led-particles" aria-hidden="true"></canvas>
+    <header class="led-header"><div class="led-brand"><img src="../assets/images/sacci-logo.png" alt="SACCI seal"><div><strong>TAGLISAYAHAN 2026</strong><span>St. Anthony College Calapan City, Inc.</span></div></div><div class="led-status"><i></i> LIVE RANKING</div></header>
+    <div class="led-main"><section class="led-title-block"><span class="led-kicker">23rd SACCI Intramurals</span><h1 class="led-title"><span>Road to</span><strong>Victory</strong></h1><div class="led-clock" id="led-clock"></div></section><section class="led-ranking" id="led-ranking" aria-label="Live championship ranking"></section></div>
+    <footer class="led-ticker"><div class="led-ticker-label">BREAKING NEWS</div><div class="led-ticker-copy" id="led-ticker"></div></footer>
+  </main>
+  <div class="led-controls"><button class="button button-sm" id="show-rankings" type="button">Rankings</button><button class="button button-sm button-gold" id="show-winner" type="button">Champion Reveal</button><button class="button button-sm" id="fullscreen" type="button">Fullscreen</button><a class="button button-sm" href="../index.html">Exit</a></div>
+  <section class="winner-reveal" id="winner-reveal" aria-live="polite"><canvas class="firework-canvas" id="fireworks"></canvas><div class="winner-content" id="winner-content"></div></section>
+</body>
+</html>

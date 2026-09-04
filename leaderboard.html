@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#3a0a17"><meta name="description" content="Live TAGLISAYAHAN 2026 family standings and official event result history.">
+  <title>Live Leaderboard | TAGLISAYAHAN 2026</title>
+  <link rel="icon" href="../assets/images/sacci-logo.png"><link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/core.js" defer></script><script src="../js/app.js" defer></script>
+</head>
+<body data-page="leaderboard" data-root="../">
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+    <section class="page-hero" data-watermark="RANKINGS"><canvas class="particle-canvas leaderboard-particles" id="leaderboard-particles" aria-hidden="true"></canvas><div class="container page-title"><span class="eyebrow">Live championship table</span><h1>The race for SACCI glory.</h1><p>Official standings update automatically whenever a verified result is recorded in the command center.</p><div class="page-actions"><span class="status-chip green"><i></i> Synced standings</span><a class="button button-sm" href="../led-mode/index.html">Open LED mode</a><a class="button button-sm button-maroon" href="bracket.html">Open bracket intelligence</a></div></div></section>
+    <section class="section-compact leaderboard-stage-section"><div class="container"><div class="leaderboard-stage panel" data-reveal><div class="leaderboard-stage-glow"></div><canvas class="particle-canvas" id="leaderboard-stage-particles" aria-hidden="true"></canvas><div class="panel-head"><div><span class="kicker">Live power rankings</span><h2>Championship podium</h2></div><span class="status-chip gold">Rank lock • real time</span></div><div id="leaderboard-podium" class="leaderboard-podium"></div></div></div></section>
+    <section class="section-compact"><div class="container"><div class="panel"><div class="panel-head"><h2>Overall family ranking</h2><span class="muted" id="ranking-updated"></span></div><div class="panel-body leader-list leaderboard-hero-list" id="full-leaderboard"></div></div></div></section>
+    <section class="section" id="results"><div class="container"><div class="section-heading" data-reveal><div><span class="eyebrow">Verified outcomes</span><h2>Latest event results.</h2></div><p>Points shown below follow the official 2026 category and placement values.</p></div><div class="panel result-table-wrap" data-reveal><table class="result-table"><thead><tr><th>Event</th><th>Category</th><th>Champion</th><th>Recorded</th><th style="text-align:right">Award</th></tr></thead><tbody id="result-history"></tbody></table></div></div></section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

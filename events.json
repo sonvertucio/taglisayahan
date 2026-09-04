@@ -1,0 +1,65 @@
+{
+  "version": "2026.1",
+  "source": "TAGLISAYAHAN Guidelines 2026",
+  "categories": [
+    {
+      "id": "sports",
+      "name": "Sports",
+      "events": [
+        {"id":"basketball-men","name":"Basketball — Men","participants":"12-player team","placements":[600,500,400,300,200],"bracketEligible":true,"bonuses":[{"name":"MVP","points":100},{"name":"Mythical Five","points":100}]},
+        {"id":"basketball-women","name":"Basketball — Women 3×3","participants":"3×3 team","placements":[600,500,400,300,200],"bracketEligible":true,"bonuses":[{"name":"MVP","points":100},{"name":"Mythical Five","points":100}]},
+        {"id":"volleyball-men","name":"Volleyball — Men","participants":"Minimum 8 players","placements":[600,500,400,300,200],"bracketEligible":true,"bonuses":[{"name":"MVP","points":150},{"name":"Best Position Award","points":100}]},
+        {"id":"volleyball-women","name":"Volleyball — Women","participants":"Minimum 8 players","placements":[600,500,400,300,200],"bracketEligible":true,"bonuses":[{"name":"MVP","points":150},{"name":"Best Position Award","points":100}]},
+        {"id":"sepak-takraw-men","name":"Sepak Takraw — Men","participants":"Team event","placements":[400,300,200,100,50],"bracketEligible":true},
+        {"id":"sepak-takraw-women","name":"Sepak Takraw — Women","participants":"Team event","placements":[400,300,200,100,50],"bracketEligible":true},
+        {"id":"badminton-men","name":"Badminton Singles — Men","participants":"1 player","placements":[400,300,200,100,50]},
+        {"id":"badminton-women","name":"Badminton Singles — Women","participants":"1 player","placements":[400,300,200,100,50]},
+        {"id":"badminton-mixed","name":"Badminton Doubles — Mixed","participants":"Mixed doubles","placements":[400,300,200,100,50]},
+        {"id":"table-tennis-men","name":"Table Tennis Singles — Men","participants":"1 player","placements":[400,300,200,100,50]},
+        {"id":"table-tennis-women","name":"Table Tennis Singles — Women","participants":"1 player","placements":[400,300,200,100,50]},
+        {"id":"table-tennis-mixed","name":"Table Tennis Doubles — Mixed","participants":"Mixed doubles","placements":[400,300,200,100,50]},
+        {"id":"pickleball","name":"Pickleball Doubles","participants":"Doubles team","placements":[400,300,200,100,50],"bracketEligible":true},
+        {"id":"100m-men","name":"100 m Dash — Men","participants":"Individual","placements":[400,300,200,100,50]},
+        {"id":"100m-women","name":"100 m Dash — Women","participants":"Individual","placements":[400,300,200,100,50]},
+        {"id":"200m-men","name":"200 m Dash — Men","participants":"Individual","placements":[400,300,200,100,50]},
+        {"id":"200m-women","name":"200 m Dash — Women","participants":"Individual","placements":[400,300,200,100,50]},
+        {"id":"400m-relay","name":"400 m Relay","participants":"4 members: 2 men, 2 women","placements":[250,200,150,100,50]},
+        {"id":"long-jump-men","name":"Long Jump — Men","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"long-jump-women","name":"Long Jump — Women","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"shot-put-men","name":"Shot Put — Men","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"shot-put-women","name":"Shot Put — Women","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"discus-men","name":"Discus Throw — Men","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"discus-women","name":"Discus Throw — Women","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"javelin-men","name":"Javelin Throw — Men","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"javelin-women","name":"Javelin Throw — Women","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"darts-men","name":"Darts (501) — Men","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"darts-women","name":"Darts (501) — Women","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"chess-men","name":"Chess — Men","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"chess-women","name":"Chess — Women","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"generals-men","name":"Game of the Generals — Men","participants":"Individual","placements":[300,250,200,150,100]},
+        {"id":"generals-women","name":"Game of the Generals — Women","participants":"Individual","placements":[300,250,200,150,100]},
+        {"id":"scrabble-men","name":"Scrabble — Men","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"scrabble-women","name":"Scrabble — Women","participants":"Individual","placements":[250,200,150,100,50]},
+        {"id":"mobile-legends","name":"Mobile Legends","participants":"One 5-member team","placements":[250,200,150,100,50],"bracketEligible":true}
+      ]
+    },
+    {
+      "id": "academic",
+      "name": "Academic",
+      "events": [
+        {"id":"quiz-bee","name":"Quiz Bee","participants":"One 3-member team","placements":[350,300,250,200,150]},
+        {"id":"debate","name":"Debate","participants":"3 debaters and 1 adjudicator","placements":[400,300,200,150,100],"bonuses":[{"name":"Best Speaker","points":50},{"name":"Best Debater","points":50}]},
+        {"id":"storytelling","name":"Story-telling","participants":"1 participant; self-made story","placements":[250,200,150,100,50]},
+        {"id":"oral-declamation","name":"Oral Declamation","participants":"1 participant","placements":[250,200,150,100,50]}
+      ]
+    },
+    {
+      "id": "cultural",
+      "name": "Cultural",
+      "events": [
+        {"id":"muse-escort","name":"Muse and Escort","participants":"One pair; individual scores","placements":[350,300,200,150,100]},
+        {"id":"cheerdance","name":"Cheerdance Competition","participants":"30 dancers and 5 spotters","placements":[800,700,600,500,400]}
+      ]
+    }
+  ]
+}

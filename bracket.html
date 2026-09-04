@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#3a0a17"><meta name="description" content="Live double-elimination bracket intelligence for TAGLISAYAHAN 2026.">
+  <title>Bracket Intelligence | TAGLISAYAHAN 2026</title>
+  <link rel="icon" href="../assets/images/sacci-logo.png"><link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/core.js" defer></script><script src="../js/bracket.js" defer></script>
+</head>
+<body data-page="bracket" data-root="../">
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+    <section class="page-hero bracket-hero" data-watermark="BRACKET">
+      <div class="container page-title">
+        <span class="eyebrow">Live tournament intelligence</span>
+        <h1>Every life. Every route. Every rival.</h1>
+        <p>Follow the five-family double-elimination race from the winner’s bracket to the loser’s bracket and the grand final. Select a family to reveal their current standing and the opponents still in their path.</p>
+        <div class="page-actions"><span class="status-chip green"><i></i> Live bracket feed</span><a class="button button-sm" href="leaderboard.html">View leaderboard →</a></div>
+      </div>
+    </section>
+
+    <section class="section-compact bracket-controls-section">
+      <div class="container">
+        <div class="panel bracket-toolbar" data-reveal>
+          <div class="form-field"><label for="bracket-event-select">Select bracket event</label><select id="bracket-event-select"></select><small>Only team-format events configured for double elimination appear here.</small></div>
+          <div><span class="kicker">Track a family</span><div id="bracket-family-picker" class="strategy-picker bracket-family-picker" aria-label="Choose family"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bracket-section">
+      <div class="container">
+        <div class="bracket-intel-grid" id="bracket-intel" data-reveal></div>
+        <div class="panel bracket-canvas-panel" data-reveal>
+          <div class="panel-head"><div><span class="kicker">Five-team double elimination</span><h2 id="bracket-title">Winner’s bracket → Loser’s bracket → Grand final</h2></div><span class="status-chip gold" id="bracket-updated">Waiting for feed</span></div>
+          <div class="bracket-scroll"><div class="bracket-board" id="bracket-board"><div class="bracket-empty">Loading bracket intelligence…</div><svg class="bracket-lines" id="bracket-lines" aria-hidden="true"></svg></div></div>
+          <div class="bracket-legend"><span><i class="legend-dot live"></i>Live now</span><span><i class="legend-dot done"></i>Verified result</span><span><i class="legend-dot next"></i>Next possible match</span><span><i class="legend-dot conditional"></i>Conditional route</span><span class="muted">A second grand-final match appears only if the first final is reset.</span></div>
+        </div>
+        <div class="panel bracket-detail" id="bracket-detail" data-reveal><div class="bracket-detail-copy"><span class="kicker">Match intel</span><h2>Select a match card</h2><p>Tap any match to see its live score, bracket consequence, and the families that could appear next.</p></div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

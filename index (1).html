@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#3a0a17"><meta name="description" content="TAGLISAYAHAN 2026 tournament command center.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Admin Command Center | TAGLISAYAHAN 2026</title>
+  <link rel="icon" href="../assets/images/sacci-logo.png"><link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/core.js" defer></script><script src="../js/admin.js" defer></script>
+</head>
+<body class="admin-body" data-page="admin" data-root="../">
+  <div class="login-screen" id="login-screen">
+    <form class="panel login-card" id="login-form">
+      <img src="../assets/images/sacci-logo.png" alt="SACCI seal">
+      <span class="eyebrow">Restricted access</span>
+      <h1>Command Center</h1>
+      <p>Sign in to record verified results and control the live arena.</p>
+      <div class="login-form">
+        <div class="form-field"><label for="username">Username</label><input id="username" name="username" autocomplete="username" required placeholder="Admin username"></div>
+        <div class="form-field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Admin password"></div>
+        <button class="button button-gold" type="submit" id="login-button">Enter command center</button>
+      </div>
+      <div class="login-note">Authorized SACCI tournament personnel only.</div>
+    </form>
+  </div>
+
+  <div class="admin-shell" id="admin-shell" hidden>
+    <aside class="admin-sidebar">
+      <a class="admin-brand" href="../index.html"><img src="../assets/images/sacci-logo.png" alt=""><div><strong>TAGLISAYAHAN</strong><span>Command Center</span></div></a>
+      <nav class="admin-nav" aria-label="Admin sections">
+        <button class="active" type="button" data-view="dashboard" title="Dashboard">⌂ <span>Dashboard</span></button>
+        <button type="button" data-view="results" title="Record result">＋ <span>Record Result</span></button>
+        <button type="button" data-view="data" title="Data hub">⇄ <span>Data Hub</span></button>
+        <button type="button" data-view="announcements" title="Announcements">◉ <span>Announcements</span></button>
+        <button type="button" data-view="settings" title="Settings">⚙ <span>Arena Settings</span></button>
+      </nav>
+      <div class="admin-sidebar-footer"><a class="button button-sm" href="../led-mode/index.html"><span>Open LED Mode</span> ▣</a><button class="button button-sm button-danger" id="logout-button" type="button"><span>Sign out</span> ↗</button></div>
+    </aside>
+    <main class="admin-main">
+      <header class="admin-topbar"><h1 id="admin-view-title">Championship Overview</h1><div class="sync-status" id="sync-status"><i></i><span>Ready</span></div></header>
+      <div class="admin-content">
+        <section class="admin-view active" id="view-dashboard">
+          <div class="admin-metrics" id="admin-metrics"></div>
+          <div class="arena-grid">
+            <article class="panel"><div class="panel-head"><h2>Live standings</h2><div class="panel-head-actions"><button class="button button-sm data-import-button" type="button" data-import-open="families">Import families</button><a href="../pages/leaderboard.html">Public view →</a></div></div><div class="panel-body leader-list" id="admin-leaderboard"></div></article>
+            <aside class="panel"><div class="panel-head"><h2>Recent activity</h2></div><div class="panel-body insight-list" id="admin-activity"></div></aside>
+          </div>
+        </section>
+
+        <section class="admin-view" id="view-results">
+          <div class="workflow">
+            <article class="panel">
+              <div class="panel-head"><div><span class="kicker">Official scoring workflow</span><h2>Record verified result</h2></div><button class="button button-sm data-import-button" type="button" data-import-open="results">Import results</button></div>
+              <div class="workflow-steps"><div class="workflow-step active" data-step="1"><b>1</b>Category</div><div class="workflow-step" data-step="2"><b>2</b>Event</div><div class="workflow-step" data-step="3"><b>3</b>Placements</div><div class="workflow-step" data-step="4"><b>4</b>Review</div></div>
+              <form class="workflow-body" id="result-form">
+                <div class="form-grid"><div class="form-field"><label for="result-category">Event category</label><select id="result-category" required><option value="">Select category</option></select></div><div class="form-field"><label for="result-event">Official event</label><select id="result-event" required disabled><option value="">Select an event</option></select></div></div>
+                <div class="placement-grid" id="placement-grid"></div>
+                <div class="bonus-list" id="bonus-list"></div>
+                <div class="result-note" id="result-note">Choose a category and event. The official 2026 point values will load automatically.</div>
+                <div class="form-actions"><button class="button button-gold" type="submit" id="review-result" disabled>Review & submit result</button></div>
+              </form>
+            </article>
+            <aside class="panel score-preview"><span class="kicker">Automatic point engine</span><h3>Score preview</h3><div class="preview-list" id="score-preview"><div class="empty-state">Select an event to preview official placement points.</div></div></aside>
+          </div>
+        </section>
+
+        <section class="admin-view" id="view-data">
+          <div class="data-hub-intro"><div class="section-heading"><div><span class="eyebrow">Command center data hub</span><h2>Import once. Broadcast everywhere.</h2></div><p>Bring in official spreadsheets or JSON for any arena area. The same validator protects family crests, scoring rules, and live public views.</p></div></div>
+          <div class="import-grid">
+            <article class="panel import-card" data-import-area="results"><div class="import-card-head"><div><span class="kicker">01 / Scoring</span><h2>Results</h2></div><span class="status-chip gold">Points engine</span></div><p>Import verified placements, winners, and optional bonuses for any configured event.</p><input type="file" accept=".json,.csv,application/json,text/csv" data-import-file><button class="button button-gold" type="button" data-import-action>Import results</button><small>CSV: eventId, categoryId, family1–family5.</small><span class="import-status" data-import-status></span></article>
+            <article class="panel import-card" data-import-area="brackets"><div class="import-card-head"><div><span class="kicker">02 / Match flow</span><h2>Brackets</h2></div><span class="status-chip">Live route</span></div><p>Update match cards, scores, lives, possible opponents, and grand-final resets.</p><input type="file" accept=".json,.csv,application/json,text/csv" data-import-file><button class="button button-gold" type="button" data-import-action>Import brackets</button><small>JSON: { "brackets": { "event-id": { "matches": [] } } }.</small><span class="import-status" data-import-status></span></article>
+            <article class="panel import-card" data-import-area="families"><div class="import-card-head"><div><span class="kicker">03 / Teams</span><h2>Families</h2></div><span class="status-chip">Crests protected</span></div><p>Refresh points, records, momentum, and category totals while official logo paths stay locked.</p><input type="file" accept=".json,.csv,application/json,text/csv" data-import-file><button class="button button-gold" type="button" data-import-action>Import families</button><small>CSV: id or name, points, wins, losses, momentum.</small><span class="import-status" data-import-status></span></article>
+            <article class="panel import-card" data-import-area="announcements"><div class="import-card-head"><div><span class="kicker">04 / Broadcast</span><h2>Announcements</h2></div><span class="status-chip">News ticker</span></div><p>Load a prepared dispatch queue for the homepage ticker, LED mode, and activity feed.</p><input type="file" accept=".json,.csv,application/json,text/csv" data-import-file><button class="button button-gold" type="button" data-import-action>Import dispatches</button><small>CSV: title, body, type, createdAt.</small><span class="import-status" data-import-status></span></article>
+            <article class="panel import-card" data-import-area="schedule"><div class="import-card-head"><div><span class="kicker">05 / Run of show</span><h2>Schedule</h2></div><span class="status-chip">Arena timing</span></div><p>Keep the next battles and venues current across public and LED displays.</p><input type="file" accept=".json,.csv,application/json,text/csv" data-import-file><button class="button button-gold" type="button" data-import-action>Import schedule</button><small>CSV: time, event, venue, status.</small><span class="import-status" data-import-status></span></article>
+            <article class="panel import-card" data-import-area="settings"><div class="import-card-head"><div><span class="kicker">06 / Control</span><h2>Settings</h2></div><span class="status-chip">Countdown</span></div><p>Change championship status and countdown target without touching the scoring dataset.</p><input type="file" accept=".json,application/json" data-import-file><button class="button button-gold" type="button" data-import-action>Import settings</button><small>JSON: meta.countdownTarget, meta.status.</small><span class="import-status" data-import-status></span></article>
+          </div>
+          <article class="panel manual-data" data-reveal><div class="panel-head"><div><span class="kicker">Manual entry fallback</span><h2>Paste a controlled JSON payload</h2></div><span class="status-chip green">Validated before save</span></div><div class="panel-body"><div class="form-grid"><div class="form-field"><label for="manual-data-area">Import area</label><select id="manual-data-area"><option value="results">Results</option><option value="brackets">Brackets</option><option value="families">Families</option><option value="announcements">Announcements</option><option value="schedule">Schedule</option><option value="settings">Settings</option><option value="full">Full state snapshot</option></select></div><div class="form-field"><label>Data safety</label><small>Official family logo files are never overwritten by imports. Invalid IDs and placement collisions are rejected.</small></div></div><textarea id="manual-json" spellcheck="false" placeholder='{"results":[{"eventId":"mobile-legends","categoryId":"sports","placements":["sinaghuna","gatdulang-tala","adlaw-lawin","lakambakod","huru-bakunawa"]}]}'></textarea><div class="manual-data-actions"><div><button class="button button-gold" type="button" id="apply-manual-data">Validate & apply JSON</button><button class="button" type="button" id="export-data">Export current state</button></div><span class="muted" id="manual-data-note">Tip: export first, edit a copy, then import it back.</span></div></div></article>
+          <article class="panel import-help"><div class="panel-head"><h2>Import contract</h2></div><div class="panel-body">Accepted files are <code>.json</code> or simple <code>.csv</code>. You can provide an area wrapper (for example <code>{"families":[…]}</code>) or the raw array. Results use official placement points from the event guide; family names are matched to their protected IDs. Every successful import is stored on this device and synchronized to Netlify when a live admin session is available.</div></article>
+        </section>
+
+        <section class="admin-view" id="view-announcements">
+          <div class="analytics-layout">
+            <article class="panel"><div class="panel-head"><h2>Publish announcement</h2><button class="button button-sm data-import-button" type="button" data-import-open="announcements">Import dispatches</button></div><form class="panel-body" id="announcement-form"><div class="form-grid"><div class="form-field"><label for="announcement-title">Headline</label><input id="announcement-title" required maxlength="90" placeholder="Championship update"></div><div class="form-field"><label for="announcement-type">Type</label><select id="announcement-type"><option value="update">Update</option><option value="breaking">Breaking</option><option value="result">Result</option></select></div></div><div class="form-field" style="margin-top:1rem"><label for="announcement-body">Message</label><textarea id="announcement-body" rows="4" maxlength="220" required placeholder="Write a clear arena announcement…"></textarea></div><div class="form-actions"><button class="button button-gold" type="submit">Publish announcement</button></div></form></article>
+            <aside class="panel"><div class="panel-head"><h2>Latest dispatches</h2></div><div class="panel-body insight-list" id="announcement-list"></div></aside>
+          </div>
+        </section>
+
+        <section class="admin-view" id="view-settings">
+          <div class="analytics-layout">
+            <article class="panel"><div class="panel-head"><h2>Arena configuration</h2><button class="button button-sm data-import-button" type="button" data-import-open="settings">Import settings</button></div><form class="panel-body" id="settings-form"><div class="form-grid"><div class="form-field"><label for="countdown-target">Countdown target</label><input id="countdown-target" type="datetime-local" required><small>Displayed on the public arena homepage.</small></div><div class="form-field"><label for="event-status">Championship status</label><select id="event-status"><option>Live</option><option>Scheduled</option><option>Intermission</option><option>Completed</option><option>Live Demo</option></select></div></div><div class="form-actions"><button class="button button-gold" type="submit">Save arena settings</button></div></form></article>
+            <aside class="panel danger-zone"><span class="kicker">Data controls</span><h2>Restore sample data</h2><p class="muted">This replaces current device data with the packaged SACCI sample standings. On a configured Netlify deployment, the restored data will also be synchronized.</p><button class="button button-danger" type="button" id="reset-data">Restore sample dataset</button></aside>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+    <div class="panel modal-card"><span class="kicker">Final verification</span><h2 id="confirm-title">Submit official result?</h2><div id="confirm-summary"></div><div class="modal-actions"><button class="button" type="button" id="cancel-result">Go back</button><button class="button button-gold" type="button" id="confirm-result">Confirm & publish</button></div></div>
+  </div>
+</body>
+</html>

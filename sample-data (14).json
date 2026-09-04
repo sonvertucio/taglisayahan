@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "school": "ST. ANTHONY COLLEGE CALAPAN CITY, INC.",
+    "event": "TAGLISAYAHAN 2026",
+    "theme": "Tagisan, Talino, Saya at Paligsahan",
+    "edition": "23rd SACCI Intramurals",
+    "status": "Live Demo",
+    "countdownTarget": "2026-09-10T08:00:00+08:00",
+    "updatedAt": "2026-09-04T08:30:00+08:00"
+  },
+  "families": [
+    {"id":"huru-bakunawa","name":"Huru Bakunawa","motto":"Rise beyond the storm","logo":"assets/images/family-huru-bakunawa.webp","color":"#d9b36c","points":4850,"wins":6,"losses":4,"championships":2,"streak":2,"momentum":72,"categories":{"sports":2650,"academic":1250,"cultural":950}},
+    {"id":"gatdulang-tala","name":"Gatdulang Tala","motto":"Strength guided by the stars","logo":"assets/images/family-gatdulang-tala.webp","color":"#4ab9ff","points":5160,"wins":7,"losses":3,"championships":3,"streak":3,"momentum":86,"categories":{"sports":2910,"academic":1400,"cultural":850}},
+    {"id":"lakambakod","name":"Lakambakod","motto":"Rooted in honor, built to endure","logo":"assets/images/family-lakambakod.webp","color":"#e2a851","points":4720,"wins":5,"losses":5,"championships":2,"streak":1,"momentum":64,"categories":{"sports":2340,"academic":1380,"cultural":1000}},
+    {"id":"sinaghuna","name":"Sinaghuna","motto":"One vision. One flight. One victory.","logo":"assets/images/family-sinaghuna.webp","color":"#ffb23e","points":5420,"wins":8,"losses":2,"championships":4,"streak":4,"momentum":92,"categories":{"sports":3030,"academic":1290,"cultural":1100}},
+    {"id":"adlaw-lawin","name":"Adlaw Lawin","motto":"Fly higher, shine brighter","logo":"assets/images/family-adlaw-lawin.webp","color":"#7ed957","points":5050,"wins":6,"losses":4,"championships":3,"streak":2,"momentum":79,"categories":{"sports":2490,"academic":1510,"cultural":1050}}
+  ],
+  "results": [
+    {"id":"r-006","eventId":"quiz-bee","event":"Quiz Bee","category":"academic","winner":"adlaw-lawin","placements":["adlaw-lawin","gatdulang-tala","sinaghuna","lakambakod","huru-bakunawa"],"points":[350,300,250,200,150],"recordedAt":"2026-09-04T08:30:00+08:00"},
+    {"id":"r-005","eventId":"basketball-men","event":"Basketball — Men","category":"sports","winner":"sinaghuna","placements":["sinaghuna","gatdulang-tala","huru-bakunawa","adlaw-lawin","lakambakod"],"points":[600,500,400,300,200],"recordedAt":"2026-09-03T16:40:00+08:00"},
+    {"id":"r-004","eventId":"mobile-legends","event":"Mobile Legends","category":"sports","winner":"gatdulang-tala","placements":["gatdulang-tala","sinaghuna","lakambakod","adlaw-lawin","huru-bakunawa"],"points":[250,200,150,100,50],"recordedAt":"2026-09-03T13:15:00+08:00"},
+    {"id":"r-003","eventId":"oral-declamation","event":"Oral Declamation","category":"academic","winner":"lakambakod","placements":["lakambakod","adlaw-lawin","huru-bakunawa","sinaghuna","gatdulang-tala"],"points":[250,200,150,100,50],"recordedAt":"2026-09-02T15:20:00+08:00"},
+    {"id":"r-002","eventId":"volleyball-women","event":"Volleyball — Women","category":"sports","winner":"sinaghuna","placements":["sinaghuna","huru-bakunawa","gatdulang-tala","lakambakod","adlaw-lawin"],"points":[600,500,400,300,200],"recordedAt":"2026-09-02T11:00:00+08:00"},
+    {"id":"r-001","eventId":"storytelling","event":"Story-telling","category":"academic","winner":"huru-bakunawa","placements":["huru-bakunawa","sinaghuna","adlaw-lawin","gatdulang-tala","lakambakod"],"points":[250,200,150,100,50],"recordedAt":"2026-09-01T14:10:00+08:00"}
+  ],
+  "brackets": {
+    "mobile-legends": {
+      "format": "Double Elimination",
+      "updatedAt": "2026-09-04T08:35:00+08:00",
+      "currentMatch": "M5",
+      "matches": [
+        {"id":"M1","bracket":"winners","round":"Winner R1","label":"M1","teamA":"huru-bakunawa","teamB":"gatdulang-tala","scoreA":1,"scoreB":2,"status":"Final","winner":"gatdulang-tala","loser":"huru-bakunawa"},
+        {"id":"M2","bracket":"winners","round":"Winner R1","label":"M2","teamA":"lakambakod","teamB":"sinaghuna","scoreA":0,"scoreB":2,"status":"Final","winner":"sinaghuna","loser":"lakambakod"},
+        {"id":"M3","bracket":"winners","round":"Winner R1","label":"M3","teamA":"adlaw-lawin","teamB":"BYE","scoreA":null,"scoreB":null,"status":"Final","winner":"adlaw-lawin","loser":null},
+        {"id":"M4","bracket":"winners","round":"Winner Semi","label":"M4","teamA":"gatdulang-tala","teamB":"adlaw-lawin","scoreA":2,"scoreB":1,"status":"Final","winner":"gatdulang-tala","loser":"adlaw-lawin"},
+        {"id":"M5","bracket":"winners","round":"Winner Final","label":"M5","teamA":"gatdulang-tala","teamB":"sinaghuna","scoreA":null,"scoreB":null,"status":"Live","winner":null,"loser":null,"scheduled":"Today • 15:30"},
+        {"id":"L1","bracket":"losers","round":"Loser R1","label":"L1","teamA":"huru-bakunawa","teamB":"lakambakod","scoreA":1,"scoreB":2,"status":"Final","winner":"lakambakod","loser":"huru-bakunawa"},
+        {"id":"L2","bracket":"losers","round":"Loser R1","label":"L2","teamA":"adlaw-lawin","teamB":"BYE","scoreA":null,"scoreB":null,"status":"Final","winner":"adlaw-lawin","loser":null},
+        {"id":"L3","bracket":"losers","round":"Loser R2","label":"L3","teamA":"lakambakod","teamB":"adlaw-lawin","scoreA":null,"scoreB":null,"status":"Upcoming","winner":null,"loser":null},
+        {"id":"L4","bracket":"losers","round":"Loser Final","label":"L4 • If first loss","teamA":"TBD","teamB":"TBD","scoreA":null,"scoreB":null,"status":"Conditional","winner":null,"loser":null},
+        {"id":"M6","bracket":"losers","round":"Loser R3","label":"M6","teamA":"TBD","teamB":"TBD","scoreA":null,"scoreB":null,"status":"Upcoming","winner":null,"loser":null},
+        {"id":"M7","bracket":"losers","round":"Loser Final","label":"M7","teamA":"TBD","teamB":"TBD","scoreA":null,"scoreB":null,"status":"Upcoming","winner":null,"loser":null},
+        {"id":"M8","bracket":"grand","round":"Grand Final","label":"M8","teamA":"sinaghuna","teamB":"TBD","scoreA":null,"scoreB":null,"status":"Upcoming","winner":null,"loser":null},
+        {"id":"M9","bracket":"grand","round":"Bracket Reset","label":"M9 • if needed","teamA":"TBD","teamB":"TBD","scoreA":null,"scoreB":null,"status":"Conditional","winner":null,"loser":null}
+      ]
+    }
+  },
+  "schedule": [
+    {"time":"09:00","event":"Badminton Singles — Men","venue":"SACCI Gymnasium","status":"Next"},
+    {"time":"10:30","event":"Debate — Elimination Round","venue":"Audio-Visual Room","status":"Upcoming"},
+    {"time":"13:00","event":"Basketball — Women 3×3","venue":"SACCI Court","status":"Upcoming"},
+    {"time":"15:30","event":"Cheerdance Competition","venue":"SACCI Gymnasium","status":"Featured"}
+  ],
+  "announcements": [
+    {"id":"a-003","type":"breaking","title":"Adlaw Lawin conquers Quiz Bee","body":"A commanding academic performance earns 350 championship points.","createdAt":"2026-09-04T08:31:00+08:00"},
+    {"id":"a-002","type":"result","title":"Sinaghuna owns the basketball court","body":"The family takes the Men’s Basketball crown and strengthens its lead.","createdAt":"2026-09-03T16:42:00+08:00"},
+    {"id":"a-001","type":"update","title":"Championship race remains tight","body":"Only 370 points separate first and third place after the latest results.","createdAt":"2026-09-03T17:00:00+08:00"}
+  ]
+}

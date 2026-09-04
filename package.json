@@ -1,0 +1,17 @@
+{
+  "name": "taglisayahan-2026-sacci",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "TAGLISAYAHAN 2026 SACCI Intramurals Championship Management System",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "npx netlify dev"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
